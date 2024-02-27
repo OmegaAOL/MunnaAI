@@ -1,2 +1,3 @@
-# MunnaAI
-Website that uses ChatGPT's /completions API to create an AI that talks in the style of Munna Mukilan.
+# API deprecated
+
+The completions endpoint for ChatGPT's API appears to be no longer functioning. 
