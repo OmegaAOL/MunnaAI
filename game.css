@@ -1,0 +1,28 @@
+
+body{
+    text-decoration-color: white !important;
+		}
+		.wrapper {
+			width: 100%;
+			display: inline-flex;
+			text-align: left;
+		}
+		.container {
+			width: 90%;
+			margin: 0 auto;
+			position: relative;
+		}
+
+html {
+  height: 100%;
+  width: 100%;
+  background: #191919 !important;
+}
+
+#canvas2{
+  border: 2px solid #ff4000;
+  width: 1200;
+  height: 600;
+  top: 50%;
+  left: 50%;
+}

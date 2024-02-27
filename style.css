@@ -1,0 +1,117 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  background: #191919 !important;
+}
+
+#homeHyperlinkDev{
+  color: #000000;
+}
+
+.header {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 100%);
+  position: relative;
+  height: 57px;
+  top: -16px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  
+}
+
+.logo{
+ position: relative !important;
+ height: 133% !important;
+ bottom: 45px !important;
+  left: 10px !important;
+}
+
+.header-text{
+  color: #FFFFFF;
+  visibility: hidden;
+}
+
+#munnaOptionButton, #aboutButton, #otherButton, #testButton, #discord{
+background: linear-gradient(180deg, rgba(245,113,10,1) 0%, rgba(180,22,1,1) 100%); 
+border: none !important;
+height: 30px !important;
+border-radius: 4px;
+position: relative !important;
+left: 15px !important;
+bottom: 75px !important;
+width: 100px !important;
+font-family: Helvetica;
+font-size: 15px !important;
+font-weight: 700;
+}
+
+#aboutButton{
+  left: 30px !important;
+}
+
+#otherButton{
+  left: 45px !important;
+}
+
+#testButton{
+  left: 60px !important;
+}
+
+#discord{
+  left: 1022px !important;
+  bottom: 81.66px !important;
+  width: 150px !important;
+  background: linear-gradient(180deg, rgba(133,159,251,1) 0%, rgba(107,128,199,1) 100%); 
+}
+
+#aboutButton:hover, #munnaOptionButton:hover, #otherButton:hover, #testButton:hover{
+background: linear-gradient(0deg, rgba(245,113,10,1) 0%, rgba(180,22,1,1) 100%);  
+}
+
+#discord:hover{
+background: linear-gradient(0deg, rgba(133,159,251,1) 0%, rgba(107,128,199,1) 100%);   
+}
+
+#munnaOptionButton:active, #aboutButton:active, #otherButton:active, #testButton:active{
+box-shadow: 0px 0px 12px 0px #ff3315;
+background: linear-gradient(0deg, rgba(245,113,10,1) 0%, rgba(180,22,1,1) 100%); 
+}
+
+#discord:active{
+box-shadow: 0px 0px 12px 0px #8080ff;
+background: linear-gradient(0deg, rgba(133,159,251,1) 0%, rgba(107,128,199,1) 100%);    
+}
+
+.title, .disc{
+   background: linear-gradient(0deg, rgba(255,145,0,1) 0%, rgba(180,22,1,1) 100%); 
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  text-shadow: 0px 0px 100px #a2402f;
+  font-size: 45px !important;
+  position: relative;
+  bottom: 0px;
+  left: 33px;
+  font-family: helvetica;
+}
+
+.blurb, .discText{
+background: linear-gradient(180deg, rgba(255,68,0,1) 0%, rgba(255,145,0,1) 100%); 
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  position: relative;
+  left: 33px;
+  bottom: 0px;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+

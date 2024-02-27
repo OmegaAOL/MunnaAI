@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ChatGPT</title>
+  <style type="text/css">
+    html,
+    body {
+      min-width: 320px;
+      text-align: center;
+      font-family: Courier New;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: inline-flex;
+      text-align: left;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+    }
+  </style>
+  <script>
+    const userAction = async () => {
+      const reply = "" + document.forms["input"]["reply"].value;
+
+      const input = document.forms["input"]["input"].value;
+      const reponse = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: "POST",
+        body: JSON.stringify({
+          "model": "gpt-3.5-turbo", "messages":
+            [{"role": "assistant", "content": reply},
+            {"role": "user", "content": input}
+            ]
+        }),
+        headers: {
+          "content-type": "application/json",
+          Authorization: "Bearer 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",
+        }
+      }).then((response) => {
+        if (response.ok) {
+          response.json().then((json) => {
+            const AnswerLog = [document.getElementById("output").innerHTML,
+              "<br><br>ME: ", input, "<br><br>AI: ", json.choices[0].message.content];
+            document.forms["input"]["reply"].value = json.choices[0].message.content;
+            document.forms["input"]["input"].value = "";
+            document.getElementById("output").innerHTML = AnswerLog.join("");
+          });
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <p id="output" style="white-space: pre-wrap;"></p>
+      <form id="input">
+        <input name="reply" placeholder="" readonly style="display: none;">
+        <input name="input" autofocus placeholder="User input" width: 95%;"><br>
+
+      </form>
+      <button onclick="userAction()">Generate Text</button>
+    </div>
+  </div>
+  <canvas class="muskHeads" width="1920" height="777" style="border:5px solid #000000;">
+
+  </canvas>
+  <script src="muskus.js"></script>
+  Testing page
+  <br>
+  Dev Notes: GPT-API with no CSS and full dialog print
+  <a href="index.html" id="homeHyperlinkDev"><br><br><br><br>Return to index.html</a>
+</body>
+
+</html>
